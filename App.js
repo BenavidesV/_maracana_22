@@ -12,6 +12,9 @@ import CreateLessonScreen from './screens/admin/CreateLessonScreen';
 import UserLessonDetailsScreen from './screens/users/UserLessonDetailsScreen';
 import LessonControlScreen from './screens/admin/LessonControlScreen';
 import SpecificLessonControlScreen from './screens/admin/SpecificLessonControlScreen';
+import ButtomTabs from './screens/navigation/ButtomTabs';
+import ProfileScreem from './screens/profile/ProfileScreem';
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -19,7 +22,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={ButtomTabs} />
         <Stack.Screen name="PendingReservations" component={PendingReservationsScreen} />
         <Stack.Screen name="LessonsList" component={LessonsListScreen} />
         <Stack.Screen name="LessonDetails" component={LessonDetailsScreen} />
@@ -27,6 +30,7 @@ export default function App() {
         <Stack.Screen name="UserLessonDetails" component={UserLessonDetailsScreen} />
         <Stack.Screen name="AttendanceControl" component={LessonControlScreen} />
         <Stack.Screen name="SpecificAttendanceControl" component={SpecificLessonControlScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreem} />
       </Stack.Navigator>
     </NavigationContainer>
   );
